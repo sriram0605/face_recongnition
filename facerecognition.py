@@ -19,7 +19,7 @@ import urllib.request
 from twilio.rest import Client
 
 url="http://192.168.43.1:8080/shot.jpg"
-account_sid = "AC64f8db2caaf4345bae94a9f52ba45fa7"
+account_sid = ""
 # Your Auth Token from twilio.com/console
 auth_token  = "b98ce1b7f902095b670d677a743ff172"
 
@@ -43,7 +43,7 @@ def signalHandler(signal, frame):
 def sms():
     client = Client(account_sid, auth_token)
     message = client.messages.create(
-        to="+917358542498",
+        to="+91",
         from_="+19793645458",
         body="intruder detected")
     print(message.sid)
